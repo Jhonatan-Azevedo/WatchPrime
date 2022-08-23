@@ -1,0 +1,95 @@
+.info-movie {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+}
+
+.info-movie > .bg-img-detail {
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(70, 70, 70);
+    position: relative;
+}
+
+.info-movie > .bg-img-detail > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-movie > .bg-img-detail .bg-fundo {
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 14%, rgba(0,0,0,0.6951155462184874) 22%, rgba(0,0,0,1) 30%);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content-movie {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.field-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-btn button, .field-btn > a {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: rgb(255, 153, 0);
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease .3s;
+    text-decoration: none;
+}
+
+.field-btn div button a {
+    text-decoration: none;
+    color: #000;
+}
+
+.field-btn > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.field-btn button:hover, .field-btn > a:hover {
+    opacity: .4;
+}
+
+@media screen and (max-width: 500px) {
+
+    .info-movie {
+        height: 100vh !important;
+    }
+
+    .bg-img-detail{
+        top: 0;
+        z-index: 0;
+    }
+
+    .content-movie {
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        z-index: 1000 !important;
+    } 
+
+.info-movie > .bg-img-detail .bg-fundo {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 14%, rgba(0,0,0,0.6951155462184874) 54%, rgba(0,0,0,1) 68%);
+}
+}
